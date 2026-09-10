@@ -8,6 +8,10 @@ the personal details in a screenshot before it is shared. Served by GitHub Pages
   description, features, fact sheet, screenshots, icon, video, brand notes, a press release,
   and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
   the zip.
+- `privacy/` and `terms/` are the privacy policy and the terms, moved here from Google Sites
+  on 2026-09-10 with the text unchanged. The app's Settings links and the store listing were
+  switched to these addresses in the app repository the same day; the Google Sites pages stay
+  up until a build with the new links is on the App Store.
 - `build/build.py` derives the framed screenshots, the `.webp` thumbnails, the smaller icon
   sizes, the favicon, the OG image, the zip and the file sizes shown beside every download
   link from the source files under `press/assets`.
