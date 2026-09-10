@@ -34,7 +34,7 @@ that will change first:
 - The App Review status. Version 1.0 is in review, so both pages show a Coming soon pill
   and no store link. On release, swap the pill for the App Store badge
   (`press/assets/appstore-badge.svg`, kept for that day) linking to
-  https://apps.apple.com/app/id6807279858, and turn the fact sheet's App Store row into a link.
+  https://apps.apple.com/app/id6807279858.
 - The quotes in the press release, which are drafted in the developer's voice.
 
 No em dash anywhere, the same rule the app follows.
