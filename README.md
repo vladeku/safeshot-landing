@@ -41,23 +41,9 @@ No em dash anywhere, the same rule the app follows.
 
 ## Domain
 
-`getsafeshot.app` is registered at Namecheap. For GitHub Pages it needs these records in
-Advanced DNS:
-
-| Type | Host | Value |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | vladeku.github.io |
-
-Remove the parking records first. Then set the domain on the Pages site and turn on HTTPS
-once the certificate is issued:
-
-```bash
-gh api -X PUT repos/vladeku/safeshot-landing/pages -f cname=getsafeshot.app
-gh api -X PUT repos/vladeku/safeshot-landing/pages -F https_enforced=true
-```
-
-Until the records exist the site is at https://vladeku.github.io/safeshot-landing/.
+`getsafeshot.app` is registered at Namecheap and attached to this Pages site since
+2026-09-10. Advanced DNS there holds four A records for `@` (185.199.108.153,
+185.199.109.153, 185.199.110.153, 185.199.111.153) and a CNAME `www` to `vladeku.github.io`;
+the parking URL Redirect record had to go, since it adds a fifth address to the apex. `CNAME`
+in the repository root is GitHub's, written when the domain was set, and GitHub Pages
+enforces HTTPS. The old address, https://vladeku.github.io/safeshot-landing/, redirects.
