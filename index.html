@@ -37,8 +37,8 @@
   .icon { width: 128px; height: 128px; filter: drop-shadow(0 14px 28px rgba(6, 40, 50, .22)); }
   h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 800; letter-spacing: -.035em; line-height: 1.05; margin-top: 28px; text-wrap: balance; }
   .lede { font-size: 19px; color: var(--muted); max-width: 44ch; margin: 18px auto 0; text-wrap: balance; }
-  .store { display: inline-block; line-height: 0; margin-top: 30px; }
-  .store img { height: 54px; width: auto; }
+  .soon-pill { display: inline-flex; align-items: center; gap: 10px; margin-top: 30px; padding: 13px 18px; border-radius: 14px; border: 1.5px solid var(--line); color: var(--muted); font-weight: 700; font-size: 15px; line-height: 1.2; }
+  .soon-pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
   .soon { font-size: 14px; color: var(--muted); margin-top: 10px; }
   nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 44px; font-size: 15px; font-weight: 600; }
   nav a { text-decoration: none; }
@@ -52,8 +52,8 @@
     <img class="icon" src="assets/icon-512.png" alt="SafeShot app icon: an ID card with a black bar over the eyes and one row covered" width="128" height="128">
     <h1>Cover what you didn't mean to&nbsp;share.</h1>
     <p class="lede">SafeShot finds the personal details in a screenshot, covers them on your iPhone, and shows you every mask before you share the copy.</p>
-    <a class="store" href="https://apps.apple.com/app/id6807279858" aria-label="Download on the App Store"><img src="press/assets/appstore-badge.svg" alt="Download on the App Store" width="162" height="54"></a>
-    <p class="soon">In App Review now. Requires iOS 27 and iPhone 15 Pro or later.</p>
+    <span class="soon-pill">Coming soon to the App Store</span>
+    <p class="soon">Version 1.0 is in App Review. Requires iOS 27 and iPhone 15 Pro or later.</p>
     <nav>
       <a href="press/">Press kit</a>
       <a href="https://sites.google.com/view/safeshot-privacy-policy">Privacy Policy</a>

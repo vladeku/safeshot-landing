@@ -132,7 +132,7 @@ Reviewers can ask for a promo code or a TestFlight build by email: khuraskin.dev
 - Price: free, one screenshot a day. SafeShot Pro: $14.99, one purchase.
 - Version: 1.0
 - Status: in App Review
-- App Store: https://apps.apple.com/app/id6807279858
+- App Store: https://apps.apple.com/app/id6807279858, live on release
 - Category: Utilities. Secondary: Photo & Video
 - Age rating: 4+
 - Languages: 16, listed above
