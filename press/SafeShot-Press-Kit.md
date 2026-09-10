@@ -82,16 +82,16 @@ it the other person does not need: a balance in the corner, a phone number under
 street address three messages up. Covering it by hand means the markup pen, a shaky rectangle
 and a second look I skip when I am in a hurry.
 
-iOS 27 gave me a way to do this. Apple Intelligence can now look at an image on the device and
-say what is on it, and Vision has read text on screen for years. SafeShot puts the two
-together, and you decide what stays covered. No app can promise to remove all your private information, and that promise is what
-makes you send a screenshot without a second look. So SafeShot suggests, and you decide.
+iOS 27 made SafeShot possible. Apple Intelligence can now look at an image right on the
+iPhone and say what is on it, so an app can read a screenshot the way you would and point at
+the balance, the name and the address without sending a pixel anywhere. SafeShot builds on
+that, and you decide what stays covered. No app can promise to remove all your private
+information, and that promise is what makes you send a screenshot without a second look. So
+SafeShot suggests, and you decide.
 
 The other choices followed from that one. Solid masks are the default, because a blur can be
 undone. There is no server, because a screenshot of your bank app has no business leaving the
 phone. Pro is one purchase, because I would not pay a subscription for a utility either.
-
-Vladimir Khuraskin
 
 ## Pricing
 
@@ -115,7 +115,8 @@ Reviewers can ask for a promo code or a TestFlight build by email: khuraskin.dev
 - Category: Utilities. Secondary: Photo & Video
 - Age rating: 4+
 - Languages: 16, listed above
-- Built with: SwiftUI, Vision and Apple Intelligence
+- Built with: Apple Intelligence through the iOS 27 Foundation Models framework, on the
+  device, and SwiftUI
 - Website: https://getsafeshot.app
 - Privacy policy: https://sites.google.com/view/safeshot-privacy-policy
 - Terms: https://sites.google.com/view/safeshot-terms-and-conditions
@@ -154,9 +155,9 @@ FOR IMMEDIATE RELEASE
 SafeShot covers the personal details in a screenshot before you share it, on the iPhone itself
 
 Independent developer Vladimir Khuraskin today released SafeShot, a privacy utility for iPhone
-that finds the personal details in a screenshot and covers them before the screenshot goes
-out. SafeShot runs its analysis on the device with Apple Intelligence and ships with no
-server, no account and no analytics.
+built on the on-device Apple Intelligence of iOS 27. It finds the personal details in a
+screenshot and covers them before the screenshot goes out, and it ships with no server, no
+account and no analytics.
 
 Take a screenshot, tap Share, pick SafeShot, and the editor opens with the personal details
 already covered. SafeShot finds card numbers, IBANs, phone numbers, email addresses,
