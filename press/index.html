@@ -213,7 +213,7 @@
       <a class="btn" href="SafeShot-Press-Kit.zip" download>Download press kit <span class="size">ZIP · <span data-size="SafeShot-Press-Kit.zip">12.5 MB</span></span></a>
       <a class="store" href="https://apps.apple.com/app/id6807279858" aria-label="Download on the App Store"><img src="assets/appstore-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
     </div>
-    <p class="note">Version 1.0 was submitted to App Review on 10 September 2026. The App Store link resolves when Apple releases it.</p>
+    <p class="note">Version 1.0 is in App Review. The App Store link starts working when Apple releases it.</p>
     <ul class="quick">
       <li><a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot">khuraskin.dev@gmail.com</a></li>
       <li><a href="https://x.com/vladeku">@vladeku on X</a></li>
@@ -236,7 +236,7 @@
       </div>
       <div class="row"><span>New balance</span><button class="mask" type="button" aria-pressed="true" title="Tap to uncover">$12,190.55<span class="grips" aria-hidden="true"></span></button></div>
     </div>
-    <p class="hint">Tap a mask to uncover it. Tap it again to cover. That is the whole review step in the editor.</p>
+    <p class="hint">Tap a mask to uncover it, and tap again to cover it. The editor works the same way.</p>
   </div>
 </section>
 
@@ -295,22 +295,22 @@
           <ul class="list">
             <li>Pattern checks on every screenshot: card numbers, IBANs, phone numbers in the formats of twenty countries, email addresses, one-time codes, IP addresses and map coordinates.</li>
             <li>Image detection: faces and QR codes.</li>
-            <li>Apple Intelligence for context: an account balance, a person's name, a street address, a date of birth, a username, a booking reference, a medical result. The model sees the picture and a numbered list of the text on it and answers with numbers. The coordinates always come from Vision, so a mask lands on a line the app can point to.</li>
+            <li>Apple Intelligence for context: an account balance, a person's name, a street address, a date of birth, a username, a booking reference, a medical result. The model sees the picture and a numbered list of the text on it and answers with numbers. Vision supplies the coordinates, so every mask sits on a line of text Vision found.</li>
           </ul>
         </div>
         <div>
           <h3>You decide</h3>
           <ul class="list">
-            <li>Tap a mask to uncover it, tap again to cover. Hold to remove. Drag a corner to resize. Drag over anything SafeShot missed.</li>
+            <li>Tap a mask to uncover it and tap again to cover it. Hold to remove it, drag a corner to resize it, or drag over anything SafeShot missed.</li>
             <li>Undo and redo, mask style included.</li>
             <li>Pinch to zoom up to 3x for small text.</li>
-            <li>Solid masks by default. Pixelate and blur are in the style menu, under a line that says blurred or pixelated details may still be recoverable.</li>
+            <li>Solid masks by default. The style menu also offers pixelate and blur, under a warning that blurred or pixelated details may still be recoverable.</li>
           </ul>
         </div>
         <div>
           <h3>What leaves the phone</h3>
           <ul class="list">
-            <li>The export is a new image. The covered pixels are replaced, the original is never modified, and the copy carries no location, capture date or device metadata.</li>
+            <li>The export is a new image. SafeShot replaces the covered pixels, leaves the original untouched, and strips the location, capture date and device metadata from the copy.</li>
             <li>Works from the share sheet in Photos, Files and any app that shares images, and from the app itself.</li>
           </ul>
         </div>
@@ -337,10 +337,10 @@
     <section id="privacy">
       <h2>Where the data goes</h2>
       <dl class="where">
-        <div><dt>The screenshot</dt><dd>Copied into a protected temporary file when you open it, deleted when the editor closes.</dd></div>
-        <div><dt>The analysis</dt><dd>On the iPhone. Text, faces and codes through Vision; the language model through the Foundation Models framework on the device. SafeShot never uses Private Cloud Compute, and its build fails if the Private Cloud Compute model is linked in.</dd></div>
+        <div><dt>The screenshot</dt><dd>SafeShot copies it into a protected temporary file when you open it and deletes the copy when the editor closes.</dd></div>
+        <div><dt>The analysis</dt><dd>Runs on the iPhone. Vision reads the text, faces and codes, and the Foundation Models framework runs the language model on the device. SafeShot never uses Private Cloud Compute, and the build fails if that model gets linked in.</dd></div>
         <div><dt>The copy</dt><dd>Goes wherever you send it, through the system share sheet.</dd></div>
-        <div><dt>After a share</dt><dd>The original screenshot and its masks are saved for iCloud backup, in your own iCloud, so a shared copy can be reopened and edited again. The developer cannot read it.</dd></div>
+        <div><dt>After a share</dt><dd>SafeShot saves the original screenshot and its masks to your own iCloud, so you can reopen a shared copy and edit it again. The developer cannot read it.</dd></div>
         <div><dt>Purchases</dt><dd>Through the App Store and RevenueCat, the one third party the app talks to.</dd></div>
         <div><dt>Not collected</dt><dd>No server of our own, no account, no analytics.</dd></div>
       </dl>
@@ -348,21 +348,21 @@
 
     <section id="who">
       <h2>Who it's for</h2>
-      <p>Anyone who explains things with screenshots. A bank confirmation sent to a landlord, a boarding pass forwarded to a friend, a chat posted to a group for advice, a bug report with an order number in it, a support ticket with an account page attached. SafeShot is for the moment between taking the screenshot and sending it.</p>
+      <p>Anyone who explains things with screenshots: a bank confirmation for a landlord, a boarding pass for a friend, a chat posted to a group for advice, a bug report with an order number in it, a support ticket with an account page attached. Each one carries something the other person does not need, and SafeShot covers it before you send.</p>
     </section>
 
     <section id="why" class="prose">
       <h2>From the developer</h2>
       <p>I send screenshots all day. A receipt to prove a transfer went through, a chat to ask a friend what they would answer, a settings page to a support agent. Almost every one has something on it the other person does not need: a balance in the corner, a phone number under a name, a street address three messages up. Covering it by hand means the markup pen, a shaky rectangle and a second look I skip when I am in a hurry.</p>
-      <p>iOS 27 gave me a way to do this properly. Apple Intelligence can now look at an image on the device and say what is on it, and Vision has read text on screen for years. SafeShot puts the two together: Vision says where every line is, the model says which lines are private, and I decide. I did not want an app that promises to remove all your private information. Nothing can promise that, and a promise like that is exactly what makes you send a screenshot without looking. SafeShot suggests. You decide.</p>
-      <p>The other choices followed from that one. Solid masks by default, because a blur can be undone. No server, because a screenshot of your bank app should not travel anywhere to be made safe. One purchase, because I would not pay a subscription for a utility either.</p>
+      <p>iOS 27 gave me a way to do this. Apple Intelligence can now look at an image on the device and say what is on it, and Vision has read text on screen for years. SafeShot puts the two together: Vision says where every line is, the model says which lines are private, and you decide. No app can promise to remove all your private information, and that promise is what makes you send a screenshot without a second look. So SafeShot suggests, and you decide.</p>
+      <p>The other choices followed from that one. Solid masks are the default, because a blur can be undone. There is no server, because a screenshot of your bank app has no business leaving the phone. Pro is one purchase, because I would not pay a subscription for a utility either.</p>
       <p class="muted">Vladimir Khuraskin</p>
     </section>
 
     <section id="pricing">
       <h2>Pricing</h2>
-      <p>SafeShot is free to download. One screenshot a day goes through the whole app, every feature included. SafeShot Pro removes the daily limit for a single purchase of $14.99 (Lifetime Pro). No subscription. Prices vary by country.</p>
-      <p>Promo codes and TestFlight builds for reviewers on request: <a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot%20review%20copy">khuraskin.dev@gmail.com</a>.</p>
+      <p>SafeShot is free to download. One screenshot a day goes through the whole app, every feature included. SafeShot Pro removes the daily limit for a single purchase of $14.99 (Lifetime Pro), with no subscription. Prices vary by country.</p>
+      <p>Reviewers can ask for a promo code or a TestFlight build by email: <a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot%20review%20copy">khuraskin.dev@gmail.com</a>.</p>
     </section>
 
     <section id="facts">
@@ -374,7 +374,7 @@
         <dt>Requires</dt><dd>iOS 27 and an iPhone that supports Apple Intelligence, iPhone 15 Pro or later. With Apple Intelligence turned off, the pattern checks and image detection still run.</dd>
         <dt>Price</dt><dd>Free, one screenshot a day. SafeShot Pro: $14.99, one purchase</dd>
         <dt>Version</dt><dd>1.0</dd>
-        <dt>Release</dt><dd>September 2026. Submitted to App Review on 10 September 2026</dd>
+        <dt>Status</dt><dd>In App Review</dd>
         <dt>App Store</dt><dd><a href="https://apps.apple.com/app/id6807279858" class="mono">apps.apple.com/app/id6807279858</a></dd>
         <dt>Category</dt><dd>Utilities. Secondary: Photo &amp; Video</dd>
         <dt>Age rating</dt><dd>4+</dd>
@@ -390,7 +390,7 @@
 
     <section id="screenshots">
       <h2>Screenshots</h2>
-      <p class="muted">Every screen shows drawn, fictional content. The people, accounts and numbers on them do not exist. Click a picture for the full-size PNG.</p>
+      <p class="muted">Every screen is drawn, and the people, accounts and numbers on it are fictional. Click a picture for the full-size PNG.</p>
 
       <h3 class="subhead">App Store set</h3>
       <div class="grid">
@@ -440,7 +440,7 @@
           <source src="assets/video/SafeShot-Demo.mp4" type="video/mp4">
         </video>
         <div>
-          <p>A 33 second clip of a transfer receipt going through the editor and the share sheet: the suggestions appear, one is uncovered, the style menu opens, the copy is saved. The same clip runs on the app's first screen.</p>
+          <p>A 33 second clip of a transfer receipt going through the editor and the share sheet: SafeShot suggests the masks, the user uncovers one, opens the style menu, and saves the copy from the share sheet. The same clip runs on the app's first screen.</p>
           <p class="muted">MP4, H.264, 524 × 1080, no audio, inside an iPhone bezel on black.</p>
           <p><a href="assets/video/SafeShot-Demo.mp4" download class="mono">SafeShot-Demo.mp4 · <span data-size="assets/video/SafeShot-Demo.mp4">1.4 MB</span></a></p>
           <p><a href="assets/video/SafeShot-Demo-Poster.jpg" download class="mono">SafeShot-Demo-Poster.jpg · <span data-size="assets/video/SafeShot-Demo-Poster.jpg">58 KB</span></a></p>
@@ -450,7 +450,7 @@
 
     <section id="brand">
       <h2>Brand</h2>
-      <p>The name is <b>SafeShot</b>, one word, with a capital S at the start and in the middle. Not Safe Shot, not Safeshot. The app writes Apple Intelligence out in full and never shortens it to AI. Type on every screen is San Francisco, the system font.</p>
+      <p>The name is <b>SafeShot</b>, one word, with a capital S at the start and in the middle. Two spellings to avoid: Safe Shot and Safeshot. The app writes Apple Intelligence out in full and never shortens it to AI. Type on every screen is San Francisco, the system font.</p>
       <div class="swatches">
         <div class="swatch"><i style="background:#197894"></i><b>Accent, light</b><span>#197894</span></div>
         <div class="swatch"><i style="background:#258FAD"></i><b>Accent, dark</b><span>#258FAD</span></div>
@@ -464,12 +464,12 @@
       <article class="release">
         <button class="copy" type="button" data-copy="release-text">Copy</button>
         <div id="release-text">
-          <div class="kicker">For immediate release · September 2026</div>
+          <div class="kicker">For immediate release</div>
           <h3>SafeShot covers the personal details in a screenshot before you share it, on the iPhone itself</h3>
-          <p>Independent developer Vladimir Khuraskin today released SafeShot, a privacy utility for iPhone that finds the personal details in a screenshot and covers them before the screenshot is shared. SafeShot runs its analysis on the device with Apple Intelligence and ships with no server, no account and no analytics.</p>
+          <p>Independent developer Vladimir Khuraskin today released SafeShot, a privacy utility for iPhone that finds the personal details in a screenshot and covers them before the screenshot goes out. SafeShot runs its analysis on the device with Apple Intelligence and ships with no server, no account and no analytics.</p>
           <p>Take a screenshot, tap Share, pick SafeShot, and the editor opens with the personal details already covered. Pattern checks find card numbers, IBANs, phone numbers, email addresses and verification codes; image detection finds faces and QR codes; Apple Intelligence reads the screen for context and finds what no pattern can, such as an account balance, a name in a chat, a street address or a date of birth.</p>
           <p>Every suggestion is a mask the user reviews. Tap a mask to uncover it, hold to remove it, drag over anything the app missed, then share. The copy is a new image with the masks baked in and no location, date or device metadata from the original.</p>
-          <blockquote>"Every screenshot app I tried either blurs a face for looks or hands you a marker. SafeShot reads the screen the way you would, points at the balance and the address, and lets you decide."</blockquote>
+          <blockquote>"The screenshot apps I tried either blur a face for looks or hand you a marker. SafeShot reads the screen the way you would, points at the balance and the address, and lets you decide."</blockquote>
           <blockquote>"Solid masks are the default because a blur can be undone. The app says so right in the style menu."</blockquote>
           <p>SafeShot is available on the App Store for iPhone 15 Pro and later running iOS 27, in 16 languages. It is free with one screenshot a day. SafeShot Pro removes the daily limit for $14.99, one purchase, no subscription.</p>
           <p>Vladimir Khuraskin is an independent developer of iPhone apps. His earlier apps include Kip, a baby sleep tracker; Plantz, a plant identifier; Astersong, a voice journal; and Caroosel, a carousel post maker.</p>

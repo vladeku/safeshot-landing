@@ -31,8 +31,8 @@ derived files too: GitHub Pages serves the repository as it is.
 The press page and `press/SafeShot-Press-Kit.md` carry the same copy. Change both. Things
 that will change first:
 
-- The release date and the App Store link. Version 1.0 was submitted to App Review on
-  10 September 2026; the badge and the App Store link resolve once Apple releases it.
+- The App Review status and the App Store link. Version 1.0 is in review; the badge and the
+  App Store link resolve once Apple releases it.
 - The quotes in the press release, which are drafted in the developer's voice.
 
 No em dash anywhere, the same rule the app follows.
