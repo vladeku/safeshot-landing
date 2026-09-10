@@ -30,45 +30,26 @@ Apple Intelligence model it uses never leaves the device.
 
 ## Key features
 
-What it finds
-
-- Pattern checks on every screenshot: card numbers, IBANs, phone numbers in the formats of
-  twenty countries, email addresses, one-time codes, IP addresses and map coordinates.
-- Image detection: faces and QR codes.
-- Apple Intelligence for context: an account balance, a person's name, a street address, a
-  date of birth, a username, a booking reference, a medical result. The model sees the picture
-  and a numbered list of the text on it and answers with numbers. Vision supplies the
-  coordinates, so every mask sits on a line of text Vision found.
-
-You decide
-
-- Tap a mask to uncover it and tap again to cover it. Hold to remove it, drag a corner to
-  resize it, or drag over anything SafeShot missed.
-- Undo and redo, mask style included.
-- Pinch to zoom up to 3x for small text.
-- Solid masks by default. The style menu also offers pixelate and blur, under a warning that
-  blurred or pixelated details may still be recoverable.
-
-What leaves the phone
-
-- The export is a new image. SafeShot replaces the covered pixels, leaves the original
-  untouched, and strips the location, capture date and device metadata from the copy.
-- Works from the share sheet in Photos, Files and any app that shares images, and from the
-  app itself.
-
-Built for iOS 27
-
-- SwiftUI, Vision and the Foundation Models framework. Dark Mode, Dynamic Type, haptics.
-- Localized into 16 languages: Chinese (Simplified and Traditional), Danish, Dutch, English,
-  French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Russian, Spanish, Swedish,
-  Turkish and Vietnamese.
+- Finds personal details automatically. Card numbers, IBANs, phone numbers, email addresses,
+  verification codes, faces and QR codes. With Apple Intelligence, also a balance, a name, an
+  address or a date of birth.
+- You decide what stays covered. Tap a mask to uncover it, hold to remove it, drag to cover
+  more, resize, undo and redo.
+- Everything happens on your iPhone. No server, no account, no analytics. The screenshot never
+  leaves the device for analysis.
+- The copy carries nothing extra. No location, capture date or device metadata, and the
+  covered details are gone from the file itself.
+- Solid masks by default. Pixelate and blur are there too, with a warning that they may be
+  recoverable.
+- Opens from the share sheet. Take a screenshot, tap Share, pick SafeShot. Photos, Files and
+  the app itself work too.
 
 ## How it works
 
 1. Take a screenshot, tap Share, pick SafeShot. Or open SafeShot and choose one from the
    library.
-2. SafeShot finds the personal details. Pattern checks and image detection run on every
-   screenshot. Apple Intelligence reads it for context.
+2. SafeShot finds the personal details. With Apple Intelligence it also catches what only
+   context reveals, such as a balance or a name in a chat.
 3. Review. Masks sit over the suggestions. Tap to uncover, hold to remove, drag to cover more.
    The status line counts what is covered and never claims the screenshot is clean.
 4. Share the copy. The export is a new image with the masks baked in and no metadata from the
@@ -78,9 +59,8 @@ Built for iOS 27
 
 - The screenshot: SafeShot copies it into a protected temporary file when you open it and
   deletes the copy when the editor closes.
-- The analysis runs on the iPhone. Vision reads the text, faces and codes, and the Foundation
-  Models framework runs the language model on the device. SafeShot never uses Private Cloud
-  Compute, and the build fails if that model gets linked in.
+- The analysis runs on the iPhone, with Apple Intelligence on the device. SafeShot never uses
+  Private Cloud Compute.
 - The copy goes wherever you send it, through the system share sheet.
 - After a share, SafeShot saves the original screenshot and its masks to your own iCloud, so
   you can reopen a shared copy and edit it again. The developer cannot read it.
@@ -104,8 +84,7 @@ and a second look I skip when I am in a hurry.
 
 iOS 27 gave me a way to do this. Apple Intelligence can now look at an image on the device and
 say what is on it, and Vision has read text on screen for years. SafeShot puts the two
-together: Vision says where every line is, the model says which lines are private, and you
-decide. No app can promise to remove all your private information, and that promise is what
+together, and you decide what stays covered. No app can promise to remove all your private information, and that promise is what
 makes you send a screenshot without a second look. So SafeShot suggests, and you decide.
 
 The other choices followed from that one. Solid masks are the default, because a blur can be
@@ -136,7 +115,7 @@ Reviewers can ask for a promo code or a TestFlight build by email: khuraskin.dev
 - Category: Utilities. Secondary: Photo & Video
 - Age rating: 4+
 - Languages: 16, listed above
-- Built with: SwiftUI, Vision, Foundation Models (Apple Intelligence), SwiftData with CloudKit
+- Built with: SwiftUI, Vision and Apple Intelligence
 - Website: https://getsafeshot.app
 - Privacy policy: https://sites.google.com/view/safeshot-privacy-policy
 - Terms: https://sites.google.com/view/safeshot-terms-and-conditions
@@ -180,10 +159,10 @@ out. SafeShot runs its analysis on the device with Apple Intelligence and ships 
 server, no account and no analytics.
 
 Take a screenshot, tap Share, pick SafeShot, and the editor opens with the personal details
-already covered. Pattern checks find card numbers, IBANs, phone numbers, email addresses and
-verification codes; image detection finds faces and QR codes; Apple Intelligence reads the
-screen for context and finds what no pattern can, such as an account balance, a name in a
-chat, a street address or a date of birth.
+already covered. SafeShot finds card numbers, IBANs, phone numbers, email addresses,
+verification codes, faces and QR codes, and with Apple Intelligence it also finds what only
+context reveals, such as an account balance, a name in a chat, a street address or a date of
+birth.
 
 Every suggestion is a mask the user reviews. Tap a mask to uncover it, hold to remove it, drag
 over anything the app missed, then share. The copy is a new image with the masks baked in and
