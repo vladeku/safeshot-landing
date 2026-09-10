@@ -91,10 +91,6 @@
   aside nav { display: grid; }
   aside nav a { display: block; padding: 5px 0; color: var(--muted); font-size: 14px; font-weight: 600; text-decoration: none; }
   aside nav a:hover { color: var(--ink); }
-  .dl { margin-top: 26px; padding: 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); }
-  .dl h3 { font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-  .dl a { display: block; margin-top: 10px; font-size: 14px; font-weight: 600; text-decoration: none; }
-  .dl a span { display: block; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); }
 
   section { padding-block: 44px; border-top: 1px solid var(--line); }
   section:first-child { border-top: 0; padding-top: 0; }
@@ -135,8 +131,6 @@
   figure img { width: 100%; height: auto; border-radius: 14px; }
   .shot img { border: 1px solid var(--line); background: var(--bg-2); }
   figcaption { margin-top: 8px; font-size: 14px; font-weight: 600; }
-  figcaption .file { display: block; font-family: var(--mono); font-size: 11px; font-weight: 500; color: var(--muted); margin-top: 2px; text-decoration: none; }
-  figcaption .file:hover { color: var(--accent); }
   .subhead { margin: 30px 0 14px; }
   .subhead:first-of-type { margin-top: 0; }
 
@@ -146,10 +140,7 @@
   .tile.light { background: #F2F2F7; color: #1D1D1F; }
   .tile.dark { background: #2B2B2B; color: #F5F5F7; }
   .tile b { font-size: 14px; }
-  .tile a { font-family: var(--mono); font-size: 11px; color: inherit; opacity: .75; text-decoration: none; }
-  .tile a:hover { opacity: 1; text-decoration: underline; }
-  .sizes { margin-top: 14px; font-family: var(--mono); font-size: 13px; }
-  .sizes a { margin-right: 14px; }
+  .tile a { display: block; line-height: 0; border-radius: 22px; }
 
   .video { display: grid; grid-template-columns: 262px 1fr; gap: 28px; align-items: start; }
   .video video { width: 262px; border-radius: 22px; background: #000; }
@@ -183,11 +174,9 @@
     aside nav { display: flex; gap: 18px; min-width: 0; overflow-x: auto; white-space: nowrap; scrollbar-width: none;
       -webkit-mask-image: linear-gradient(to right, #000 88%, transparent); mask-image: linear-gradient(to right, #000 88%, transparent); padding-right: 40px; }
     aside nav::-webkit-scrollbar { display: none; }
-    .dl { display: none; }
     .features { grid-template-columns: 1fr; }
     .video { grid-template-columns: 1fr; }
     dl.where div { grid-template-columns: 1fr; gap: 4px; }
-    .top-links a:first-child { display: none; }
   }
 </style>
 </head>
@@ -197,7 +186,6 @@
   <a class="brand" href="../"><img src="assets/icon/SafeShot-Icon-256.png" alt="" width="34" height="34">SafeShot <small>press kit</small></a>
   <div class="top-links">
     <a href="#contact">Contacts</a>
-    <a href="SafeShot-Press-Kit.zip" download>Download kit</a>
   </div>
 </header>
 
@@ -251,13 +239,6 @@
       <a href="#developer">Developer</a>
       <a href="#contact">Contacts</a>
     </nav>
-    <div class="dl">
-      <h3>Downloads</h3>
-      <a href="SafeShot-Press-Kit.zip" download>Everything <span>ZIP · <span data-size="SafeShot-Press-Kit.zip">12.5 MB</span></span></a>
-      <a href="assets/icon/SafeShot-Icon-1024.png" download>App icon <span>PNG · 1024 px · <span data-size="assets/icon/SafeShot-Icon-1024.png">823 KB</span></span></a>
-      <a href="assets/video/SafeShot-Demo.mp4" download>Demo video <span>MP4 · 33 s · <span data-size="assets/video/SafeShot-Demo.mp4">1.4 MB</span></span></a>
-      <a href="SafeShot-Press-Kit.md" download>All the text <span>Markdown · <span data-size="SafeShot-Press-Kit.md">9 KB</span></span></a>
-    </div>
   </aside>
 
   <main>
@@ -361,43 +342,42 @@
 
       <h3 class="subhead">App Store set</h3>
       <div class="grid">
-        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-1.png"><img src="assets/web/SafeShot-AppStore-1.webp" alt="Slide 1: Share Screenshots, Not Personal Info. A transfer receipt in the editor with the confirmation number and the new balance covered." width="660" height="1434" loading="lazy"></a><figcaption>Share screenshots, not personal info <a class="file" href="assets/screenshots/app-store/SafeShot-AppStore-1.png" download>PNG · 1320 × 2868 · <span data-size="assets/screenshots/app-store/SafeShot-AppStore-1.png">726 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-2.png"><img src="assets/web/SafeShot-AppStore-2.webp" alt="Slide 2: Apple Intelligence Does the Work. On Device. A chat with six items covered." width="660" height="1434" loading="lazy"></a><figcaption>Apple Intelligence does the work, on device <a class="file" href="assets/screenshots/app-store/SafeShot-AppStore-2.png" download>PNG · 1320 × 2868 · <span data-size="assets/screenshots/app-store/SafeShot-AppStore-2.png">744 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-3.png"><img src="assets/web/SafeShot-AppStore-3.webp" alt="Slide 3: Hides Personal Info. Automatically. A boarding pass with the passenger name, booking reference, frequent flyer number, e-ticket and Aztec code covered." width="660" height="1434" loading="lazy"></a><figcaption>Hides personal info, automatically <a class="file" href="assets/screenshots/app-store/SafeShot-AppStore-3.png" download>PNG · 1320 × 2868 · <span data-size="assets/screenshots/app-store/SafeShot-AppStore-3.png">701 KB</span></a></figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-1.png"><img src="assets/web/SafeShot-AppStore-1.webp" alt="Slide 1: Share Screenshots, Not Personal Info. A transfer receipt in the editor with the confirmation number and the new balance covered." width="660" height="1434" loading="lazy"></a><figcaption>Share screenshots, not personal info</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-2.png"><img src="assets/web/SafeShot-AppStore-2.webp" alt="Slide 2: Apple Intelligence Does the Work. On Device. A chat with six items covered." width="660" height="1434" loading="lazy"></a><figcaption>Apple Intelligence does the work, on device</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/app-store/SafeShot-AppStore-3.png"><img src="assets/web/SafeShot-AppStore-3.webp" alt="Slide 3: Hides Personal Info. Automatically. A boarding pass with the passenger name, booking reference, frequent flyer number, e-ticket and Aztec code covered." width="660" height="1434" loading="lazy"></a><figcaption>Hides personal info, automatically</figcaption></figure>
       </div>
 
       <h3 class="subhead">The app</h3>
       <div class="grid">
-        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-1-Home.png"><img src="assets/web/SafeShot-1-Home.webp" alt="Home: Cover what you didn't mean to share, with the Choose Screenshot button and one free screenshot left today." width="600" height="1304" loading="lazy"></a><figcaption>Home <a class="file" href="assets/screenshots/raw/SafeShot-1-Home.png" download>PNG · 1206 × 2622 · <span data-size="assets/screenshots/raw/SafeShot-1-Home.png">185 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-2-Editor.png"><img src="assets/web/SafeShot-2-Editor.webp" alt="Editor: a transfer receipt with the email, phone and new balance covered, 3 items covered in the status pill." width="600" height="1304" loading="lazy"></a><figcaption>Editor, three items covered <a class="file" href="assets/screenshots/raw/SafeShot-2-Editor.png" download>PNG · 1206 × 2622 · <span data-size="assets/screenshots/raw/SafeShot-2-Editor.png">379 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-3-Review.png"><img src="assets/web/SafeShot-3-Review.webp" alt="Review: the email mask uncovered with corner grips for resizing, 2 items covered." width="600" height="1304" loading="lazy"></a><figcaption>Review, one mask uncovered <a class="file" href="assets/screenshots/raw/SafeShot-3-Review.png" download>PNG · 1206 × 2622 · <span data-size="assets/screenshots/raw/SafeShot-3-Review.png">404 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-4-Mask-Styles.png"><img src="assets/web/SafeShot-4-Mask-Styles.webp" alt="The mask style menu: Blur, Pixelate, Solid, under the line Blurred or pixelated details may still be recoverable." width="600" height="1304" loading="lazy"></a><figcaption>Mask styles <a class="file" href="assets/screenshots/raw/SafeShot-4-Mask-Styles.png" download>PNG · 1206 × 2622 · <span data-size="assets/screenshots/raw/SafeShot-4-Mask-Styles.png">480 KB</span></a></figcaption></figure>
-        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-5-Dark-Mode.png"><img src="assets/web/SafeShot-5-Dark-Mode.webp" alt="A chat in Dark Mode with six items covered: name, address, phone, handle, email and gate code." width="600" height="1304" loading="lazy"></a><figcaption>Dark Mode, a chat <a class="file" href="assets/screenshots/raw/SafeShot-5-Dark-Mode.png" download>PNG · 1206 × 2622 · <span data-size="assets/screenshots/raw/SafeShot-5-Dark-Mode.png">452 KB</span></a></figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-1-Home.png"><img src="assets/web/SafeShot-1-Home.webp" alt="Home: Cover what you didn't mean to share, with the Choose Screenshot button and one free screenshot left today." width="600" height="1304" loading="lazy"></a><figcaption>Home</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-2-Editor.png"><img src="assets/web/SafeShot-2-Editor.webp" alt="Editor: a transfer receipt with the email, phone and new balance covered, 3 items covered in the status pill." width="600" height="1304" loading="lazy"></a><figcaption>Editor, three items covered</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-3-Review.png"><img src="assets/web/SafeShot-3-Review.webp" alt="Review: the email mask uncovered with corner grips for resizing, 2 items covered." width="600" height="1304" loading="lazy"></a><figcaption>Review, one mask uncovered</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-4-Mask-Styles.png"><img src="assets/web/SafeShot-4-Mask-Styles.webp" alt="The mask style menu: Blur, Pixelate, Solid, under the line Blurred or pixelated details may still be recoverable." width="600" height="1304" loading="lazy"></a><figcaption>Mask styles</figcaption></figure>
+        <figure class="shot"><a href="assets/screenshots/raw/SafeShot-5-Dark-Mode.png"><img src="assets/web/SafeShot-5-Dark-Mode.webp" alt="A chat in Dark Mode with six items covered: name, address, phone, handle, email and gate code." width="600" height="1304" loading="lazy"></a><figcaption>Dark Mode, a chat</figcaption></figure>
       </div>
 
       <h3 class="subhead">In an iPhone frame</h3>
       <p class="muted">The same five screens inside an iPhone frame on a transparent ground, for a page that needs a device.</p>
       <div class="grid">
-        <figure><a href="assets/screenshots/framed/SafeShot-1-Home-Framed.png"><img src="assets/web/SafeShot-1-Home-Framed.webp" alt="Home screen inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Home <a class="file" href="assets/screenshots/framed/SafeShot-1-Home-Framed.png" download>PNG · 1470 × 3000 · <span data-size="assets/screenshots/framed/SafeShot-1-Home-Framed.png">753 KB</span></a></figcaption></figure>
-        <figure><a href="assets/screenshots/framed/SafeShot-2-Editor-Framed.png"><img src="assets/web/SafeShot-2-Editor-Framed.webp" alt="Editor inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Editor <a class="file" href="assets/screenshots/framed/SafeShot-2-Editor-Framed.png" download>PNG · 1470 × 3000 · <span data-size="assets/screenshots/framed/SafeShot-2-Editor-Framed.png">873 KB</span></a></figcaption></figure>
-        <figure><a href="assets/screenshots/framed/SafeShot-3-Review-Framed.png"><img src="assets/web/SafeShot-3-Review-Framed.webp" alt="Review inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Review <a class="file" href="assets/screenshots/framed/SafeShot-3-Review-Framed.png" download>PNG · 1470 × 3000 · <span data-size="assets/screenshots/framed/SafeShot-3-Review-Framed.png">906 KB</span></a></figcaption></figure>
-        <figure><a href="assets/screenshots/framed/SafeShot-4-Mask-Styles-Framed.png"><img src="assets/web/SafeShot-4-Mask-Styles-Framed.webp" alt="Mask styles inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Mask styles <a class="file" href="assets/screenshots/framed/SafeShot-4-Mask-Styles-Framed.png" download>PNG · 1470 × 3000 · <span data-size="assets/screenshots/framed/SafeShot-4-Mask-Styles-Framed.png">964 KB</span></a></figcaption></figure>
-        <figure><a href="assets/screenshots/framed/SafeShot-5-Dark-Mode-Framed.png"><img src="assets/web/SafeShot-5-Dark-Mode-Framed.webp" alt="Dark Mode chat inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Dark Mode <a class="file" href="assets/screenshots/framed/SafeShot-5-Dark-Mode-Framed.png" download>PNG · 1470 × 3000 · <span data-size="assets/screenshots/framed/SafeShot-5-Dark-Mode-Framed.png">925 KB</span></a></figcaption></figure>
+        <figure><a href="assets/screenshots/framed/SafeShot-1-Home-Framed.png"><img src="assets/web/SafeShot-1-Home-Framed.webp" alt="Home screen inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Home</figcaption></figure>
+        <figure><a href="assets/screenshots/framed/SafeShot-2-Editor-Framed.png"><img src="assets/web/SafeShot-2-Editor-Framed.webp" alt="Editor inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Editor</figcaption></figure>
+        <figure><a href="assets/screenshots/framed/SafeShot-3-Review-Framed.png"><img src="assets/web/SafeShot-3-Review-Framed.webp" alt="Review inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Review</figcaption></figure>
+        <figure><a href="assets/screenshots/framed/SafeShot-4-Mask-Styles-Framed.png"><img src="assets/web/SafeShot-4-Mask-Styles-Framed.webp" alt="Mask styles inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Mask styles</figcaption></figure>
+        <figure><a href="assets/screenshots/framed/SafeShot-5-Dark-Mode-Framed.png"><img src="assets/web/SafeShot-5-Dark-Mode-Framed.webp" alt="Dark Mode chat inside an iPhone frame" width="720" height="1469" loading="lazy"></a><figcaption>Dark Mode</figcaption></figure>
       </div>
     </section>
 
     <section id="icon">
       <h2>App icon</h2>
-      <p>A schematic ID card: a photo with a bar over the eyes and a row of text covered. All six iOS 27 renditions, 1024 px PNG with the corners already rounded. Use the icon as supplied, on its own. Do not recolour it or add effects.</p>
+      <p>A schematic ID card: a photo with a bar over the eyes and a row of text covered. All six iOS 27 renditions; click one for the 1024 px PNG, corners already rounded. Use the icon as supplied, on its own. Do not recolour it or add effects.</p>
       <div class="tiles" style="margin-top:18px">
-        <div class="tile light"><img src="assets/web/SafeShot-Icon-1024.webp" alt="Default icon: white card on a teal gradient" width="96" height="96"><b>Default</b><a href="assets/icon/SafeShot-Icon-1024.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024.png">823 KB</span></a></div>
-        <div class="tile dark"><img src="assets/web/SafeShot-Icon-1024-Dark.webp" alt="Dark icon: white card on near black" width="96" height="96"><b>Dark</b><a href="assets/icon/SafeShot-Icon-1024-Dark.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024-Dark.png">1.1 MB</span></a></div>
-        <div class="tile light"><img src="assets/web/SafeShot-Icon-1024-Clear-Light.webp" alt="Clear Light icon" width="96" height="96"><b>Clear Light</b><a href="assets/icon/SafeShot-Icon-1024-Clear-Light.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024-Clear-Light.png">258 KB</span></a></div>
-        <div class="tile dark"><img src="assets/web/SafeShot-Icon-1024-Clear-Dark.webp" alt="Clear Dark icon" width="96" height="96"><b>Clear Dark</b><a href="assets/icon/SafeShot-Icon-1024-Clear-Dark.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024-Clear-Dark.png">316 KB</span></a></div>
-        <div class="tile light"><img src="assets/web/SafeShot-Icon-1024-Tinted-Light.webp" alt="Tinted Light icon" width="96" height="96"><b>Tinted Light</b><a href="assets/icon/SafeShot-Icon-1024-Tinted-Light.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024-Tinted-Light.png">389 KB</span></a></div>
-        <div class="tile dark"><img src="assets/web/SafeShot-Icon-1024-Tinted-Dark.webp" alt="Tinted Dark icon" width="96" height="96"><b>Tinted Dark</b><a href="assets/icon/SafeShot-Icon-1024-Tinted-Dark.png" download>PNG · <span data-size="assets/icon/SafeShot-Icon-1024-Tinted-Dark.png">387 KB</span></a></div>
+        <div class="tile light"><a href="assets/icon/SafeShot-Icon-1024.png"><img src="assets/web/SafeShot-Icon-1024.webp" alt="Default icon: white card on a teal gradient" width="96" height="96"></a><b>Default</b></div>
+        <div class="tile dark"><a href="assets/icon/SafeShot-Icon-1024-Dark.png"><img src="assets/web/SafeShot-Icon-1024-Dark.webp" alt="Dark icon: white card on near black" width="96" height="96"></a><b>Dark</b></div>
+        <div class="tile light"><a href="assets/icon/SafeShot-Icon-1024-Clear-Light.png"><img src="assets/web/SafeShot-Icon-1024-Clear-Light.webp" alt="Clear Light icon" width="96" height="96"></a><b>Clear Light</b></div>
+        <div class="tile dark"><a href="assets/icon/SafeShot-Icon-1024-Clear-Dark.png"><img src="assets/web/SafeShot-Icon-1024-Clear-Dark.webp" alt="Clear Dark icon" width="96" height="96"></a><b>Clear Dark</b></div>
+        <div class="tile light"><a href="assets/icon/SafeShot-Icon-1024-Tinted-Light.png"><img src="assets/web/SafeShot-Icon-1024-Tinted-Light.webp" alt="Tinted Light icon" width="96" height="96"></a><b>Tinted Light</b></div>
+        <div class="tile dark"><a href="assets/icon/SafeShot-Icon-1024-Tinted-Dark.png"><img src="assets/web/SafeShot-Icon-1024-Tinted-Dark.webp" alt="Tinted Dark icon" width="96" height="96"></a><b>Tinted Dark</b></div>
       </div>
-      <p class="sizes">Default, smaller: <a href="assets/icon/SafeShot-Icon-512.png" download>512 px</a> <a href="assets/icon/SafeShot-Icon-256.png" download>256 px</a> <a href="assets/icon/SafeShot-Icon-180.png" download>180 px</a></p>
     </section>
 
     <section id="video">
@@ -409,8 +389,6 @@
         <div>
           <p>A 33 second clip of a transfer receipt going through the editor and the share sheet: SafeShot suggests the masks, the user uncovers one, opens the style menu, and saves the copy from the share sheet. The same clip runs on the app's first screen.</p>
           <p class="muted">MP4, H.264, 524 × 1080, no audio, inside an iPhone bezel on black.</p>
-          <p><a href="assets/video/SafeShot-Demo.mp4" download class="mono">SafeShot-Demo.mp4 · <span data-size="assets/video/SafeShot-Demo.mp4">1.4 MB</span></a></p>
-          <p><a href="assets/video/SafeShot-Demo-Poster.jpg" download class="mono">SafeShot-Demo-Poster.jpg · <span data-size="assets/video/SafeShot-Demo-Poster.jpg">58 KB</span></a></p>
         </div>
       </div>
     </section>
@@ -459,7 +437,6 @@
     <section id="contact">
       <h2>Contacts</h2>
       <p>Questions, interviews, review copies and promo codes: <a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot">khuraskin.dev@gmail.com</a>. On X: <a href="https://x.com/vladeku">@vladeku</a>.</p>
-      <p style="margin-top:14px"><a class="btn" href="SafeShot-Press-Kit.zip" download>Download press kit <span class="size">ZIP · <span data-size="SafeShot-Press-Kit.zip">12.5 MB</span></span></a></p>
     </section>
   </main>
 </div>
