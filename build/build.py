@@ -110,25 +110,32 @@ def framed(raw_png, out_png):
     return canvas
 
 
+def shrink(im, size):
+    """Resample through premultiplied alpha. A plain RGBA resize lets the black of the
+    transparent pixels bleed into the edge and draws a dark rim around the icon."""
+    if im.mode in ("RGBA", "LA", "P"):
+        return im.convert("RGBA").convert("RGBa").resize(size, Image.LANCZOS).convert("RGBA")
+    return im.convert("RGB").resize(size, Image.LANCZOS)
+
+
 def thumb(im, width, out, quality=82):
     """A WebP for the page. Transparent sources keep their alpha."""
-    im = im.convert("RGBA") if im.mode in ("RGBA", "LA", "P") else im.convert("RGB")
     h = round(im.height * width / im.width)
-    im.resize((width, h), Image.LANCZOS).save(out, "WEBP", quality=quality, method=6)
+    shrink(im, (width, h)).save(out, "WEBP", quality=quality, method=6)
 
 
 def icons():
     src = os.path.join(ASSETS, "icon", "SafeShot-Icon-1024.png")
     im = Image.open(src).convert("RGBA")
     for size in (512, 256, 180):
-        im.resize((size, size), Image.LANCZOS).save(
+        shrink(im, (size, size)).save(
             os.path.join(ASSETS, "icon", "SafeShot-Icon-%d.png" % size), optimize=True)
     for name in sorted(glob.glob(os.path.join(ASSETS, "icon", "*-1024*.png"))):
         base = os.path.basename(name)[:-4]
         thumb(Image.open(name), 256, os.path.join(WEB, base + ".webp"))
     # The site's own favicon and touch icon, and the icon the root page shows.
-    im.resize((64, 64), Image.LANCZOS).save(os.path.join(ROOT, "favicon.png"), optimize=True)
-    im.resize((180, 180), Image.LANCZOS).save(os.path.join(ROOT, "apple-touch-icon.png"), optimize=True)
+    shrink(im, (64, 64)).save(os.path.join(ROOT, "favicon.png"), optimize=True)
+    shrink(im, (180, 180)).save(os.path.join(ROOT, "apple-touch-icon.png"), optimize=True)
     shutil.copy(os.path.join(ASSETS, "icon", "SafeShot-Icon-512.png"), os.path.join(ROOT, "assets", "icon-512.png"))
 
 
