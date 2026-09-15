@@ -35,10 +35,9 @@ derived files too: GitHub Pages serves the repository as it is.
 The press page and `press/SafeShot-Press-Kit.md` carry the same copy. Change both. Things
 that will change first:
 
-- The App Review status. Version 1.0 is in review, so both pages show a Coming soon pill
-  and no store link. On release, swap the pill for the App Store badge
-  (`press/assets/appstore-badge.svg`, kept for that day) linking to
-  https://apps.apple.com/app/id6807279858.
+- Version 1.0 went live on the App Store on 14 September 2026; both pages carry the badge
+  and the link, https://apps.apple.com/app/id6807279858. Update the release row and the
+  press release when a version ships.
 - The quotes in the press release, which are drafted in the developer's voice.
 
 No em dash anywhere, the same rule the app follows.

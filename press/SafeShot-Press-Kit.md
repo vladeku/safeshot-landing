@@ -6,6 +6,7 @@ SafeShot finds the personal details in a screenshot, covers them on your iPhone,
 you every mask before you share the copy.
 
 Press page with images and downloads: https://getsafeshot.app/press/
+App Store: https://apps.apple.com/app/id6807279858
 Contact: Vladimir Khuraskin, khuraskin.dev@gmail.com, https://x.com/vladeku
 
 ## Short description
@@ -99,7 +100,7 @@ SafeShot is free to download. One screenshot a day goes through the whole app, e
 included. SafeShot Pro removes the daily limit for a single purchase of $14.99 (Lifetime Pro),
 with no subscription. Prices vary by country.
 
-Reviewers can ask for a promo code or a TestFlight build by email: khuraskin.dev@gmail.com.
+Reviewers can ask for a promo code by email: khuraskin.dev@gmail.com.
 
 ## Fact sheet
 
@@ -110,7 +111,9 @@ Reviewers can ask for a promo code or a TestFlight build by email: khuraskin.dev
   With Apple Intelligence turned off, the pattern checks and image detection still run.
 - Price: free, one screenshot a day. SafeShot Pro: $14.99, one purchase.
 - Version: 1.0
-- Status: in App Review
+- Release: 14 September 2026
+- App Store: https://apps.apple.com/app/id6807279858
+- Size: 19 MB
 - Category: Utilities, Photo & Video
 - Age rating: 4+
 - Languages: 16, listed above
@@ -145,11 +148,11 @@ Every screen is drawn, and the people, accounts and numbers on it are fictional.
 
 ## Press release
 
-FOR IMMEDIATE RELEASE
+FOR IMMEDIATE RELEASE, 14 September 2026
 
 SafeShot covers the personal details in a screenshot before you share it, on the iPhone itself
 
-Independent developer Vladimir Khuraskin today released SafeShot, a privacy utility for iPhone
+Independent developer Vladimir Khuraskin has released SafeShot, a privacy utility for iPhone
 built on the on-device Apple Intelligence of iOS 27. It finds the personal details in a
 screenshot and covers them before the screenshot goes out, and it ships with no server, no
 account and no analytics.

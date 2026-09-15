@@ -58,8 +58,8 @@
   .btn { display: inline-flex; align-items: center; gap: 10px; background: var(--accent); color: var(--accent-ink); padding: 14px 20px; border-radius: 14px; font-weight: 700; font-size: 16px; text-decoration: none; line-height: 1.2; }
   .btn:hover { filter: brightness(1.08); }
   .btn .size { font-family: var(--mono); font-size: 12px; font-weight: 500; opacity: .85; }
-  .soon { display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border-radius: 14px; border: 1.5px solid var(--line); color: var(--muted); font-weight: 700; font-size: 15px; line-height: 1.2; }
-  .soon::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .store { display: inline-block; line-height: 0; border-radius: 8px; }
+  .store img { height: 50px; width: auto; }
   .note { font-size: 14px; color: var(--muted); margin-top: 16px; max-width: 52ch; }
 
   /* The demo card: the editor's review step, on the fixture's own recipient card */
@@ -196,9 +196,9 @@
     <p class="lede">SafeShot finds the personal details in a screenshot, covers them on your iPhone, and shows you every mask before you share the copy.</p>
     <div class="actions">
       <a class="btn" href="SafeShot-Press-Kit.zip" download>Download press kit <span class="size">ZIP · <span data-size="SafeShot-Press-Kit.zip">12.5 MB</span></span></a>
-      <span class="soon">Coming soon to the App Store</span>
+      <a class="store" href="https://apps.apple.com/app/id6807279858" aria-label="Download on the App Store"><img src="assets/appstore-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
     </div>
-    <p class="note">Version 1.0 is in App Review. Requires iOS 27 and iPhone 15 Pro or later.</p>
+    <p class="note">Free on the App Store since 14 September 2026. Requires iOS 27 and iPhone 15 Pro or later.</p>
   </div>
 
   <div class="demo">
@@ -309,7 +309,7 @@
     <section id="pricing">
       <h2>Pricing</h2>
       <p>SafeShot is free to download. One screenshot a day goes through the whole app, every feature included. SafeShot Pro removes the daily limit for a single purchase of $14.99 (Lifetime Pro), with no subscription. Prices vary by country.</p>
-      <p>Reviewers can ask for a promo code or a TestFlight build by email: <a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot%20review%20copy">khuraskin.dev@gmail.com</a>.</p>
+      <p>Reviewers can ask for a promo code by email: <a href="mailto:khuraskin.dev@gmail.com?subject=SafeShot%20review%20copy">khuraskin.dev@gmail.com</a>.</p>
     </section>
 
     <section id="facts">
@@ -321,7 +321,9 @@
         <dt>Requires</dt><dd>iOS 27 and an iPhone that supports Apple Intelligence, iPhone 15 Pro or later. With Apple Intelligence turned off, the pattern checks and image detection still run.</dd>
         <dt>Price</dt><dd>Free, one screenshot a day. SafeShot Pro: $14.99, one purchase</dd>
         <dt>Version</dt><dd>1.0</dd>
-        <dt>Status</dt><dd>In App Review</dd>
+        <dt>Release</dt><dd>14 September 2026</dd>
+        <dt>App Store</dt><dd><a href="https://apps.apple.com/app/id6807279858" class="mono">apps.apple.com/app/id6807279858</a></dd>
+        <dt>Size</dt><dd>19 MB</dd>
         <dt>Category</dt><dd>Utilities, Photo &amp; Video</dd>
         <dt>Age rating</dt><dd>4+</dd>
         <dt>Languages</dt><dd>16: Chinese (Simplified and Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Russian, Spanish, Swedish, Turkish, Vietnamese</dd>
@@ -403,9 +405,9 @@
       <article class="release">
         <button class="copy" type="button" data-copy="release-text">Copy</button>
         <div id="release-text">
-          <div class="kicker">For immediate release</div>
+          <div class="kicker">For immediate release · 14 September 2026</div>
           <h3>SafeShot covers the personal details in a screenshot before you share it, on the iPhone itself</h3>
-          <p>Independent developer Vladimir Khuraskin today released SafeShot, a privacy utility for iPhone built on the on-device Apple Intelligence of iOS 27. It finds the personal details in a screenshot and covers them before the screenshot goes out, and it ships with no server, no account and no analytics.</p>
+          <p>Independent developer Vladimir Khuraskin has released SafeShot, a privacy utility for iPhone built on the on-device Apple Intelligence of iOS 27. It finds the personal details in a screenshot and covers them before the screenshot goes out, and it ships with no server, no account and no analytics.</p>
           <p>Take a screenshot, tap Share, pick SafeShot, and the editor opens with the personal details already covered. SafeShot finds card numbers, IBANs, phone numbers, email addresses, verification codes, faces and QR codes, and with Apple Intelligence it also finds what only context reveals, such as an account balance, a name in a chat, a street address or a date of birth.</p>
           <p>Every suggestion is a mask the user reviews. Tap a mask to uncover it, hold to remove it, drag over anything the app missed, then share. The copy is a new image with the masks baked in and no location, date or device metadata from the original.</p>
           <blockquote>"The screenshot apps I tried either blur a face for looks or hand you a marker. SafeShot reads the screen the way you would, points at the balance and the address, and lets you decide."</blockquote>
