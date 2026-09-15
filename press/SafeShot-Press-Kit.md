@@ -107,8 +107,8 @@ Reviewers can ask for a promo code by email: khuraskin.dev@gmail.com.
 - App name: SafeShot (on the App Store: SafeShot: Redact, Mosaic, Blur)
 - Developer: Vladimir Khuraskin, independent developer
 - Platform: iPhone
-- Requires: iOS 27 and an iPhone that supports Apple Intelligence, iPhone 15 Pro or later.
-  With Apple Intelligence turned off, the pattern checks and image detection still run.
+- Requires: iOS 26. Apple Intelligence needs iOS 27 and iPhone 15 Pro or later. Without it,
+  the pattern checks and image detection still run.
 - Price: free, one screenshot a day. SafeShot Pro: $14.99, one purchase.
 - Version: 1.0
 - Release: 14 September 2026
@@ -174,9 +174,10 @@ address, and lets you decide."
 "Solid masks are the default because a blur can be undone. The app says so right in the style
 menu."
 
-SafeShot is available on the App Store for iPhone 15 Pro and later running iOS 27, in 16
-languages. It is free with one screenshot a day. SafeShot Pro removes the daily limit for
-$14.99, one purchase, no subscription.
+SafeShot is available on the App Store for iPhone on iOS 26 or later, in 16 languages. Apple
+Intelligence needs iOS 27 and iPhone 15 Pro or later, and without it the pattern checks and
+image detection still run. It is free with one screenshot a day. SafeShot Pro removes the
+daily limit for $14.99, one purchase, no subscription.
 
 About the developer. Vladimir Khuraskin is an independent developer of iPhone apps. His
 earlier apps include Kip, a baby sleep tracker; Plantz, a plant identifier; Astersong, a voice
