@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 """Derives everything on the press page from the source files under press/assets.
 
-    python3 build/build.py            # rebuild framed screenshots, thumbnails, icons, OG image, zip
+    python3 build/build.py            # rebuild framed screenshots, thumbnails, icons, OG images, zip
+    python3 build/build.py home       # only the home page's frame, receipt and the two OG images
     python3 build/build.py --import /path/to/safeshot-ios
                                       # first copy the sources out of the app repo's .build
 
@@ -32,6 +33,7 @@ ASSETS = os.path.join(PRESS, "assets")
 WEB = os.path.join(ASSETS, "web")
 FRAME = os.path.join(HERE, "frame-17promax.png")
 CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+RECEIPT = os.path.join(HERE, "receipt.png")
 
 # The iPhone 17 Pro Max frame: the screen sits at (75, 66), 1320 x 2868, corner radius 110.
 SCREEN_ORIGIN = (75, 66)
@@ -80,6 +82,9 @@ def import_sources(app_repo):
         shutil.copy(os.path.join(build, "screenshots", "captures", src),
                     os.path.join(ASSETS, "screenshots", "raw", dst))
     shutil.copy(os.path.join(app_repo, "Tools", "screenshots", "frame-17promax.png"), FRAME)
+    # The home page draws the editor around this clean copy of the receipt and lays its own
+    # masks over it; `make fixture` in the app repo writes it.
+    shutil.copy(os.path.join(build, "fixtures", "receipt.png"), RECEIPT)
     clip = os.path.join(app_repo, "SafeShot", "Onboarding", "onboarding.mp4")
     out = os.path.join(ASSETS, "video", "SafeShot-Demo.mp4")
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", clip,
@@ -153,18 +158,27 @@ def screenshots():
         thumb(Image.open(poster), 524, os.path.join(WEB, "SafeShot-Demo-Poster.webp"))
 
 
+def home_assets():
+    """What the home page's live phone is made of: the iPhone frame on a transparent ground
+    and the receipt without masks, both as WebP under assets/. The page draws the editor's
+    chrome and the masks itself, so a mask can appear, be tapped and be counted."""
+    thumb(Image.open(FRAME), 1000, os.path.join(ROOT, "assets", "frame.webp"), quality=85)
+    thumb(Image.open(RECEIPT), 804, os.path.join(ROOT, "assets", "receipt.webp"), quality=85)
+
+
 def og_image():
-    """1200 x 630 for link previews, rendered by Chrome from build/og.html."""
+    """1200 x 630 for link previews, rendered by Chrome: build/og-home.html for the home
+    page and build/og.html for the press kit."""
     if not os.path.exists(CHROME):
-        print("no Chrome, keeping the existing OG image")
+        print("no Chrome, keeping the existing OG images")
         return
-    page = os.path.join(HERE, "og.html")
-    out = os.path.join(ROOT, "assets", "og.png")
-    subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--force-device-scale-factor=1",
-                    "--hide-scrollbars", "--window-size=1200,630", "--screenshot=" + out,
-                    "file://" + page], check=True, capture_output=True)
-    Image.open(out).convert("RGB").save(os.path.join(ROOT, "assets", "og.jpg"), quality=88, optimize=True)
-    os.remove(out)
+    for page, name in (("og-home.html", "og-home.jpg"), ("og.html", "og.jpg")):
+        out = os.path.join(ROOT, "assets", "og.png")
+        subprocess.run([CHROME, "--headless=new", "--disable-gpu", "--force-device-scale-factor=1",
+                        "--hide-scrollbars", "--window-size=1200,630", "--screenshot=" + out,
+                        "file://" + os.path.join(HERE, page)], check=True, capture_output=True)
+        Image.open(out).convert("RGB").save(os.path.join(ROOT, "assets", name), quality=88, optimize=True)
+        os.remove(out)
 
 
 def kit_zip():
@@ -209,8 +223,13 @@ if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "assets"), exist_ok=True)
     if len(sys.argv) > 2 and sys.argv[1] == "--import":
         import_sources(os.path.abspath(sys.argv[2]))
+    if len(sys.argv) > 1 and sys.argv[1] == "home":
+        home_assets()
+        og_image()
+        sys.exit()
     icons()
     screenshots()
+    home_assets()
     og_image()
     print("zip", human(os.path.getsize(kit_zip())))
     for path, size in fill_sizes().items():

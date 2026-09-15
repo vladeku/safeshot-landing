@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(160deg, #3FBBD3 0%, #1E8CA8 58%, #125B6F 100%);
+    color: #fff; position: relative;
+  }
+  .glow { position: absolute; left: -160px; top: -300px; width: 960px; height: 960px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(255,255,255,.24) 0%, rgba(255,255,255,0) 62%); }
+  .icon { position: absolute; left: 84px; top: 148px; width: 334px; height: 334px;
+    filter: drop-shadow(0 30px 50px rgba(6,40,50,.38)); }
+  .text { position: absolute; left: 492px; top: 118px; right: 60px; }
+  .name { font-size: 30px; font-weight: 700; letter-spacing: -.01em; opacity: .92; }
+  h1 { font-size: 78px; font-weight: 800; letter-spacing: -.035em; line-height: 1.04; margin-top: 14px; }
+  .bar { display: inline-block; color: transparent; background: #08080A; border-radius: .16em; padding: 0 .1em;
+    box-shadow: 0 0 0 .035em rgba(255,255,255,.95), 0 0 .35em .1em rgba(255,255,255,.45); }
+  p { font-size: 26px; font-weight: 500; letter-spacing: -.01em; line-height: 1.28; margin-top: 22px; max-width: 640px; opacity: .95; }
+  .url { position: absolute; left: 492px; bottom: 44px; font-size: 24px; font-weight: 600; opacity: .9; letter-spacing: -.01em; }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <img class="icon" src="../press/assets/icon/SafeShot-Icon-1024.png" alt="">
+  <div class="text">
+    <div class="name">SafeShot for iPhone</div>
+    <h1>Share screenshots,<br>not <span class="bar">personal info</span>.</h1>
+    <p>Finds the personal details in a screenshot and covers them on your iPhone. You review every mask, then share the copy.</p>
+  </div>
+  <div class="url">getsafeshot.app</div>
+</body>
+</html>

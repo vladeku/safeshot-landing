@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://getsafeshot.app/</loc>
+    <lastmod>2026-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://getsafeshot.app/assets/og-home.jpg</image:loc>
+      <image:title>SafeShot: share screenshots, not personal info</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://getsafeshot.app/press/assets/screenshots/raw/SafeShot-2-Editor.png</image:loc>
+      <image:title>The SafeShot editor with three items covered on a transfer receipt</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://getsafeshot.app/press/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://getsafeshot.app/privacy/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://getsafeshot.app/terms/</loc>
+    <lastmod>2026-09-10</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

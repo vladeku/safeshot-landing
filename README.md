@@ -3,7 +3,14 @@
 The website for [SafeShot](https://getsafeshot.app), a privacy utility for iPhone that covers
 the personal details in a screenshot before it is shared. Served by GitHub Pages from `main`.
 
-- `index.html` is the home page: icon, tagline, App Store badge, links.
+- `index.html` is the home page, the landing page for the app: a live copy of the editor
+  in an iPhone frame whose masks appear one by one and can be tapped, three drawn screens
+  with the masks the app would draw, the three steps, the editor's gestures, the three mask
+  styles, where the data goes, the two prices, nine questions with `FAQPage` markup, the
+  developer's note and the App Store badge. It reuses the press kit's copy and images, and
+  `assets/frame.webp` and `assets/receipt.webp` come from `build/frame-17promax.png` and
+  `build/receipt.png` through `python3 build/build.py home`, which also renders the two OG
+  images. `robots.txt` and `sitemap.xml` sit beside it.
 - `press/` is the press kit, live at [getsafeshot.app/press](https://getsafeshot.app/press/):
   description, features, fact sheet, screenshots, icon, video, brand notes, a press release,
   and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
@@ -25,6 +32,7 @@ the raw captures, and `SafeShot/Onboarding/onboarding.mp4` is the demo clip.
 ```bash
 python3 build/build.py --import ../safeshot-ios   # copy the sources in, re-encode the clip
 python3 build/build.py                            # derive everything else
+python3 build/build.py home                       # only the home page's frame, receipt and OG images
 ```
 
 Needs Pillow with WebP, ffmpeg for the import, and Google Chrome for the OG image. Commit the
@@ -32,8 +40,8 @@ derived files too: GitHub Pages serves the repository as it is.
 
 ## Updating the text
 
-The press page and `press/SafeShot-Press-Kit.md` carry the same copy. Change both. Things
-that will change first:
+The press page and `press/SafeShot-Press-Kit.md` carry the same copy, and the home page
+quotes it. Change all three. Things that will change first:
 
 - Version 1.0 went live on the App Store on 14 September 2026; both pages carry the badge
   and the link, https://apps.apple.com/app/id6807279858. Update the release row and the
