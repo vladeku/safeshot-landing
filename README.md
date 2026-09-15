@@ -3,7 +3,8 @@
 The website for [SafeShot](https://getsafeshot.app), a privacy utility for iPhone that covers
 the personal details in a screenshot before it is shared. Served by GitHub Pages from `main`.
 
-- `index.html` is the home page: icon, tagline, App Store badge, links.
+- `index.html` is the home page: icon, tagline, App Store badge. The press kit, the privacy
+  policy and the terms are reachable by their addresses and not linked from it.
 - `press/` is the press kit, live at [getsafeshot.app/press](https://getsafeshot.app/press/):
   description, features, fact sheet, screenshots, icon, video, brand notes, a press release,
   and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
