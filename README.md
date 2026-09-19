@@ -1,18 +1,24 @@
 # getsafeshot.app
 
-The website for [SafeShot](https://getsafeshot.app), a privacy utility for iPhone that covers
-the personal details in a screenshot before it is shared. Served by GitHub Pages from `main`.
+The old domain of the app that has been called MaskFrame since 19 September 2026. Its site is
+[maskframe.app](https://maskframe.app), from `vladeku/maskframe-landing`. Served by GitHub
+Pages from `main`.
 
-- `index.html` is the home page: icon, tagline, App Store badge. The press kit, the privacy
-  policy and the terms are reachable by their addresses and not linked from it.
+**This domain has to keep answering.** Every installed copy of versions 1.0 and 1.1 links to
+`getsafeshot.app/privacy/` and `getsafeshot.app/terms/`, so those two, the home page and
+`404.html` are redirects to the same path on `maskframe.app`: a meta refresh, a
+`location.replace` that keeps the query and the fragment, a canonical link and `noindex`.
+GitHub Pages cannot send a 301, and one repository serves one custom domain, which is why the
+two sites are two repositories.
+
+- `index.html` redirects to the home page on `maskframe.app`.
 - `press/` is the press kit, live at [getsafeshot.app/press](https://getsafeshot.app/press/):
   description, features, fact sheet, screenshots, icon, video, brand notes, a press release,
   and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
   the zip.
-- `privacy/` and `terms/` are the privacy policy and the terms, moved here from Google Sites
-  on 2026-09-10 with the text unchanged. The app's Settings links and the store listing were
-  switched to these addresses in the app repository the same day; the Google Sites pages stay
-  up until a build with the new links is on the App Store.
+- `privacy/` and `terms/` redirect to the documents on `maskframe.app`. They were moved here
+  from Google Sites on 2026-09-10 and on to `maskframe.app` on 2026-09-19, where they say
+  "formerly SafeShot" once.
 - `build/build.py` derives the framed screenshots, the `.webp` thumbnails, the smaller icon
   sizes, the favicon, the OG image, the zip and the file sizes shown beside every download
   link from the source files under `press/assets`.
