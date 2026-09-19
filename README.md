@@ -1,27 +1,11 @@
-# getsafeshot.app
+# getsafeshot.app, retired
 
-The old domain of the app that has been called MaskFrame since 19 September 2026. Its site is
-[maskframe.app](https://maskframe.app), from `vladeku/maskframe-landing`. Served by GitHub
-Pages from `main`.
-
-**This domain has to keep answering.** Every installed copy of versions 1.0 and 1.1 links to
-`getsafeshot.app/privacy/` and `getsafeshot.app/terms/`, so those two, the home page and
-`404.html` are redirects to the same path on `maskframe.app`: a meta refresh, a
-`location.replace` that keeps the query and the fragment, a canonical link and `noindex`.
-GitHub Pages cannot send a 301, and one repository serves one custom domain, which is why the
-two sites are two repositories.
-
-- `index.html` redirects to the home page on `maskframe.app`.
-- `press/` is the press kit, live at [getsafeshot.app/press](https://getsafeshot.app/press/):
-  description, features, fact sheet, screenshots, icon, video, brand notes, a press release,
-  and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
-  the zip.
-- `privacy/` and `terms/` redirect to the documents on `maskframe.app`. They were moved here
-  from Google Sites on 2026-09-10 and on to `maskframe.app` on 2026-09-19, under the new name
-  only.
-- `build/build.py` derives the framed screenshots, the `.webp` thumbnails, the smaller icon
-  sizes, the favicon, the OG image, the zip and the file sizes shown beside every download
-  link from the source files under `press/assets`.
+The site of the app while it was called SafeShot. The app has been MaskFrame since
+19 September 2026 and its site is [maskframe.app](https://maskframe.app), from
+`vladeku/maskframe-landing`. GitHub Pages was switched off here on 2026-09-19 and the
+repository archived: `getsafeshot.app` answers nothing, by decision, and the links to it in
+the installed 1.0 and 1.1 were let go with it. The press kit under `press/` went offline at
+the same time and is kept here as the source for one on the new domain.
 
 ## Updating the assets
 
