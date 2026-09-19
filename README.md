@@ -17,8 +17,8 @@ two sites are two repositories.
   and `SafeShot-Press-Kit.zip` with all of it. `SafeShot-Press-Kit.md` is the text half of
   the zip.
 - `privacy/` and `terms/` redirect to the documents on `maskframe.app`. They were moved here
-  from Google Sites on 2026-09-10 and on to `maskframe.app` on 2026-09-19, where they say
-  "formerly SafeShot" once.
+  from Google Sites on 2026-09-10 and on to `maskframe.app` on 2026-09-19, under the new name
+  only.
 - `build/build.py` derives the framed screenshots, the `.webp` thumbnails, the smaller icon
   sizes, the favicon, the OG image, the zip and the file sizes shown beside every download
   link from the source files under `press/assets`.
